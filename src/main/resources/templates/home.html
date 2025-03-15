@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Home</title>
+  <style>
+    .profile-picture {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+<h1>Welcome, <span th:text="${name}"></span>!</h1>
+<p>Email: <span th:text="${email}"></span></p>
+<p>Provider: <span th:text="${provider}"></span></p>
+<div th:if="${picture}">
+  <img th:src="${picture}" alt="Profile Picture" class="profile-picture"/>
+</div>
+<a href="/logout">Logout</a>
+</body>
+</html>
