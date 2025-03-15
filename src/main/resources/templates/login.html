@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Login Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f3f3f3; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+    a { display: inline-block; margin: 10px 0; text-decoration: none; color: #007BFF; }
+    a:hover { text-decoration: underline; }
+    .btn { display: block; width: 100%; padding: 10px; margin: 10px 0; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }
+    .btn:hover { background: #0056b3; }
+  </style>
 </head>
 <body>
-<h2>Login with:</h2>
-<a href="/oauth2/authorization/google">Google</a><br><br>
-<a href="/oauth2/authorization/facebook">Facebook</a><br><br>
-<a href="/">Back to Home</a>
+<div class="container">
+  <h2>Login</h2>
+  <a class="btn" href="/oauth2/authorization/google">Login with Google</a>
+  <a class="btn" href="/oauth2/authorization/facebook">Login with Facebook</a>
+  <hr>
+  <a href="/register">Don't have an account? Register</a><br>
+  <a href="/">Back to Home</a>
+</div>
 </body>
 </html>
